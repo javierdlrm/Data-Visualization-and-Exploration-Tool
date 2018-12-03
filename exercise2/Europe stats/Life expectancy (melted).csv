@@ -1,0 +1,421 @@
+,Country.Name,Country.Code,Indicator.Name,Indicator.Code,Year,Life.Exp
+29,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,78.12682927
+30,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.72195122
+31,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,71.66341463
+32,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,78.01
+33,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,74.96829268
+34,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.92682927
+35,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,76.59268293
+36,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,78.96585366
+37,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,70.41707317
+38,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.46585366
+39,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,79.05609756
+40,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.74146341
+41,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.88780488
+42,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,72.80780488
+43,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,71.24634146
+44,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,76.53658537
+45,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,79.77804878
+46,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,72.0195122
+47,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.87317073
+48,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,70.31463415
+49,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,78.2
+50,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,77.98780488
+51,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,73.74878049
+52,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,76.31463415
+53,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,71.16341463
+54,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,73.05121951
+55,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,75.41219512
+56,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2000,79.64390244
+57,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,78.57560976
+58,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,77.97317073
+59,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,71.76829268
+60,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,78.14
+61,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,75.17317073
+62,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,78.32926829
+63,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,76.79268293
+64,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,79.36829268
+65,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,70.25853659
+66,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,77.96585366
+67,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,79.15853659
+68,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,77.99268293
+69,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,78.38780488
+70,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,74.51292683
+71,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,72.24878049
+72,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,77.13414634
+73,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,80.12682927
+74,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,71.65853659
+75,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,77.82439024
+76,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,70.76097561
+77,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,78.84390244
+78,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,78.1902439
+79,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,74.2
+80,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,76.81463415
+81,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,71.16097561
+82,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,73.40243902
+83,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,75.75853659
+84,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2001,79.79512195
+85,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.67804878
+86,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.07560976
+87,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,71.86585366
+88,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.264
+89,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,75.22195122
+90,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.22926829
+91,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,76.89512195
+92,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,79.56829268
+93,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,70.90487805
+94,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.1195122
+95,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,79.26097561
+96,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.14390244
+97,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.64146341
+98,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,74.71731707
+99,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,72.34878049
+100,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,77.63414634
+101,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,80.22926829
+102,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,71.76097561
+103,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,77.96585366
+104,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,70.96097561
+105,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.73902439
+106,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,78.29268293
+107,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,74.49756098
+108,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,77.06585366
+109,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,71.0097561
+110,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,73.60487805
+111,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,76.00731707
+112,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2002,79.84634146
+113,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.63170732
+114,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.12926829
+115,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,72.06585366
+116,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.386
+117,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,75.17073171
+118,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.3804878
+119,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,77.14390244
+120,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,79.6195122
+121,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,71.31707317
+122,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.36829268
+123,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,79.11463415
+124,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.44634146
+125,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.84146341
+126,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,74.61390244
+127,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,72.3
+128,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.13902439
+129,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,79.98292683
+130,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,72.06097561
+131,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,77.72682927
+132,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,71.26585366
+133,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.54634146
+134,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,78.49268293
+135,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,74.59756098
+136,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,77.2195122
+137,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,71.3097561
+138,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,73.60487805
+139,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,76.85853659
+140,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2003,80.09512195
+141,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,79.1804878
+142,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,78.87804878
+143,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,72.56341463
+144,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,78.506
+145,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,75.72195122
+146,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,78.6804878
+147,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,77.49268293
+148,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,79.87073171
+149,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,71.9097561
+150,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,78.71463415
+151,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,80.16341463
+152,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,78.74634146
+153,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,79.03902439
+154,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,75.5202439
+155,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,72.64878049
+156,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,78.53902439
+157,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,80.7804878
+158,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,71.96097561
+159,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,79.12195122
+160,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,72.02682927
+161,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,79.25365854
+162,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,79.09512195
+163,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,74.84634146
+164,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,77.67073171
+165,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,71.59427561
+166,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,73.95853659
+167,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,77.20731707
+168,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2004,80.49756098
+169,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,79.33170732
+170,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,78.9804878
+171,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,72.56097561
+172,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,78.631
+173,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,75.92439024
+174,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,78.93170732
+175,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,77.84390244
+176,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,80.17073171
+177,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,72.56829268
+178,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,78.81707317
+179,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,80.16341463
+180,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,79.04878049
+181,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,79.23902439
+182,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,75.24463415
+183,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,72.64878049
+184,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,78.94390244
+185,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,80.78292683
+186,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,71.25365854
+187,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,79.43170732
+188,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,71.35609756
+189,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,79.3
+190,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,79.34634146
+191,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,74.99512195
+192,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,78.07073171
+193,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,71.87889512
+194,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,73.90487805
+195,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,77.61219512
+196,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2005,80.54634146
+197,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.8804878
+198,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.3804878
+199,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,72.61219512
+200,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,78.764
+201,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,76.52439024
+202,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.13170732
+203,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,78.09512195
+204,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,80.82195122
+205,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,72.69146341
+206,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.21463415
+207,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,80.81219512
+208,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.24878049
+209,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.43902439
+210,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,75.83682927
+211,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,73.09756098
+212,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.24146341
+213,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,81.28292683
+214,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,71.05609756
+215,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.28780488
+216,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,70.86585366
+217,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.43902439
+218,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,79.69756098
+219,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,75.14390244
+220,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,78.4195122
+221,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,72.16341463
+222,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,74.20487805
+223,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,78.08658537
+224,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2006,80.74878049
+225,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,80.1804878
+226,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.78292683
+227,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,72.66341463
+228,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,78.911
+229,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,76.72439024
+230,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.53414634
+231,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,78.19512195
+232,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,80.87317073
+233,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,72.81463415
+234,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.26341463
+235,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,81.11219512
+236,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.44878049
+237,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.43902439
+238,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,75.70560976
+239,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,73.15121951
+240,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.64146341
+241,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,81.43414634
+242,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,70.9
+243,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.38292683
+244,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,71.0195122
+245,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,79.79268293
+246,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,80.09756098
+247,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,75.24390244
+248,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,78.32195122
+249,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,72.56585366
+250,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,74.20731707
+251,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,78.56097561
+252,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2007,80.9
+253,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,80.43170732
+254,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.6804878
+255,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,72.96341463
+256,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.071
+257,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,76.97560976
+258,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.73658537
+259,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,78.44634146
+260,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,81.17560976
+261,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,73.77073171
+262,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.56829268
+263,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,81.21463415
+264,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.6
+265,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.93902439
+266,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,75.91219512
+267,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,73.70243902
+268,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,80.09512195
+269,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,81.48536585
+270,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,71.81219512
+271,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,80.53902439
+272,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,72.4195122
+273,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,79.63658537
+274,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,80.25121951
+275,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,75.54390244
+276,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,78.52439024
+277,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,72.56585366
+278,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,74.70487805
+279,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,78.76585366
+280,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2008,81.1
+281,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.33170732
+282,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.03414634
+283,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,73.41219512
+284,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,79.245
+285,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,77.07804878
+286,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,79.83658537
+287,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,78.59756098
+288,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,81.47560976
+289,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,74.82439024
+290,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,79.7195122
+291,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,81.41463415
+292,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.05121951
+293,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.18780488
+294,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,76.16829268
+295,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,73.90487805
+296,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.1902439
+297,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,81.63658537
+298,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,72.91463415
+299,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.63658537
+300,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,73.0804878
+301,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.24146341
+302,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,80.54878049
+303,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,75.69512195
+304,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,78.72682927
+305,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,73.3097561
+306,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,74.9097561
+307,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,78.97073171
+308,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2009,81.35121951
+309,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.5804878
+310,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.18292683
+311,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,73.51219512
+312,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,79.43
+313,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,77.42439024
+314,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,79.98780488
+315,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,79.1
+316,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,81.62682927
+317,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,75.42926829
+318,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,79.87073171
+319,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,81.66341463
+320,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.40243902
+321,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.38780488
+322,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,76.47560976
+323,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,74.20731707
+324,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.74390244
+325,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,82.03658537
+326,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,73.26829268
+327,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.63170732
+328,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,73.48292683
+329,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,81.39756098
+330,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,80.70243902
+331,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,76.24634146
+332,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,79.02682927
+333,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,73.45853659
+334,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,75.11219512
+335,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,79.42195122
+336,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2010,81.45121951
+337,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.98292683
+338,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.58536585
+339,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,74.16341463
+340,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,79.62
+341,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,77.87317073
+342,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.43658537
+343,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,79.8
+344,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,82.47560976
+345,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,76.22926829
+346,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.47073171
+347,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,82.11463415
+348,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.95121951
+349,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.73170732
+350,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,76.77560976
+351,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,74.85853659
+352,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.74634146
+353,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,82.18780488
+354,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,73.56341463
+355,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.98780488
+356,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,73.57560976
+357,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.74634146
+358,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,81.20487805
+359,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,76.69512195
+360,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,80.47073171
+361,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,74.4097561
+362,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,75.95853659
+363,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,79.97073171
+364,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2011,81.80243902
+365,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.93658537
+366,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.38536585
+367,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,74.31463415
+368,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,79.81
+369,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,78.07560976
+370,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.53902439
+371,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.05121951
+372,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,82.42682927
+373,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,76.32682927
+374,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.62682927
+375,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,81.96829268
+376,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.90487805
+377,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.63414634
+378,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,76.92439024
+379,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,75.06341463
+380,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.84634146
+381,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,82.23902439
+382,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,73.86341463
+383,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,81.39268293
+384,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,73.77804878
+385,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.74634146
+386,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,81.10487805
+387,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,76.74634146
+388,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.37317073
+389,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,74.41219512
+390,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,76.1097561
+391,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,80.12439024
+392,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2012,81.70487805
+393,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.13658537
+394,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,80.58780488
+395,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,74.86097561
+396,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,79.995
+397,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,78.17560976
+398,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,80.4902439
+399,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,80.3
+400,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,83.07804878
+401,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,77.14146341
+402,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,80.97560976
+403,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,82.2195122
+404,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.00487805
+405,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.28536585
+406,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,77.12682927
+407,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,75.56585366
+408,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81
+409,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,82.6902439
+410,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,73.91463415
+411,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.8
+412,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,73.98292683
+413,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.74634146
+414,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.30487805
+415,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,77
+416,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,80.72195122
+417,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,75.06341463
+418,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,76.41219512
+419,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,80.32195122
+420,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2013,81.95609756
+421,Austria,AUT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.4902439
+422,Belgium,BEL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.28780488
+423,Bulgaria,BGR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,74.46585366
+424,Cyprus,CYP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,80.173
+425,Czech Republic,CZE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,78.82439024
+426,Germany,DEU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.0902439
+427,Denmark,DNK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,80.7
+428,Spain,ESP,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,83.22926829
+429,Estonia,EST,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,77.03414634
+430,Finland,FIN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.1804878
+431,France,FRA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,82.67073171
+432,United Kingdom,GBR,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.30487805
+433,Greece,GRC,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.38536585
+434,Croatia,HRV,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,77.47804878
+435,Hungary,HUN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,75.76341463
+436,Ireland,IRL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.34878049
+437,Italy,ITA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,83.0902439
+438,Lithuania,LTU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,74.51707317
+439,Luxembourg,LUX,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,82.22926829
+440,Latvia,LVA,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,74.12439024
+441,Malta,MLT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.94634146
+442,Netherlands,NLD,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.70731707
+443,Poland,POL,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,77.60243902
+444,Portugal,PRT,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.12195122
+445,Romania,ROU,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,74.96097561
+446,Slovak Republic,SVK,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,76.81219512
+447,Slovenia,SVN,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,81.07804878
+448,Sweden,SWE,"Life expectancy at birth, total (years)",SP.DYN.LE00.IN,2014,82.25365854
