@@ -13,50 +13,47 @@ source(str_c(population_path, "data-preprocessing.R"), local = TRUE)
 population_ui <- function(id) {
     ns <- NS(id)
     tabPanel(
-        title = "Population",
-        h5("Summary and plots"),
-        plotOutput(ns("plot"), click = "plot_click"),
-        plotOutput(ns("plot2")),
-        verbatimTextOutput(ns("info")))
+        title = "Maps",
+        column(width = 2, class = "sidebar", box(width = 12, h4(class = "accent-color", "Options"),
+            selectizeInput(ns('countries'), "Countries:", choices = countries, selected = NULL, multiple = TRUE,
+                           options = list(placeholder = 'Type a country name, e.g. Spain', maxItems = 28)),
+            selectizeInput(ns('years'), "Years:", choices = years, selected = NULL, multiple = TRUE,
+                           options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)))),
+        column(width = 10, class = "content", box(width = 12,
+            h4("Huge map of Europe"))))
 }
 
 # Server
 
 population_server <- function(input, output, session) {
 
+    # countries
+
     observe({
-        req(values$population)
-        
-        # Enable run model
-        #shinyjs::enable("button_run_model")
+        req(values$countries_selected)
+        if (length(isolate(input$countries)) != length(values$countries_selected)) {
+            updateSelectizeInput(session, 'countries', choices = isolate(values$countries), selected = values$countries_selected, server = TRUE)
+        }
+    })
+    observe({
+        req(input$countries)
+        if (length(input$countries) != length(isolate(values$countries_selected))) {
+            values$countries_selected <<- input$countries
+        }
     })
 
-    output$population.summary <- renderPrint({
-        req(values$population)
-        return(summary(values$population))
-    })
+    # years
 
-    output$population.head <- renderTable({
-        req(values$population)
-        return(head(values$population))
+    observe({
+        req(values$years_selected)
+        if (length(isolate(input$years)) != length(values$years_selected)) {
+            updateSelectizeInput(session, 'years', choices = isolate(values$years), selected = values$years_selected, server = TRUE)
+        }
     })
-
-    output$population.tail <- renderTable({
-        req(values$population)
-        return(tail(values$population))
-    })
-
-    output$plot <- renderPlot({
-        ##plot( HumanResourceTech$`Human resources in science and technology (HRST)`, Population$X__1)
-        ggplot(NewPopulation, aes(NewPopulation$`Population without the citizenship of the reporting country`, y = NewPopulation$X__1)) + geom_bar(fill = "#0073C2FF", stat = "identity")
-    })
-
-    output$plot2 <- renderPlot({
-        ggplot(Population, aes(x = Population$`Population without the citizenship of the reporting country`, y = Population$X__3)) +
-            geom_bar(fill = "#0073C2FF", stat = "identity")
-    })
-
-    output$info <- renderPrint({
-        paste0("x=", input$plot_click$x, "\ny=", input$plot_click$y)
+    observe({
+        req(input$years)
+        if (length(input$years) != length(isolate(values$years_selected))) {
+            values$years_selected <<- input$years
+        }
     })
 }

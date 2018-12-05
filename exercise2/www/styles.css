@@ -1,0 +1,71 @@
+/*
+*       Styles
+*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Dancing Script", cursive;
+    margin-top: 18px;
+    margin-bottom: 24px;
+}
+
+/* Main layout */
+
+body {
+    background-image: url(https://wallpapertag.com/wallpaper/full/7/9/3/453874-city-night-wallpaper-1920x1200-for-mobile.jpg);
+    overflow: hidden;
+}
+
+    body > .container-fluid {
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+.main {
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    width: 100%;
+}
+
+.content-wrapper > .tabbable > .tab-content {
+    background: whitesmoke;
+}
+
+.title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 45px;
+    font-family: 'Dancing Script', cursive;
+    color: whitesmoke;
+}
+
+.nav {
+    text-align: center;
+    margin: 50px 0 40px 0;
+}
+
+    .nav > li {
+        display: inline-block;
+        float: none;
+    }
+
+.sidebar, .content {
+    padding: 10px;
+}
+.sidebar > div, .content > div {
+    background: whitesmoke;
+    border-radius: 2px;
+    padding: 8px 20px;
+}
+
+.affix {
+    position: fixed;
+    width: 15.5%;
+    top: 5px;
+}
+
+.accent-color {
+    color: #18bc9c;
+}

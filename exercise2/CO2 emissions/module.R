@@ -14,48 +14,63 @@ co2_emissions_ui <- function(id) {
     ns <- NS(id)
     tabPanel(
         title = "CO2 emissions",
-        h5("Summary and plots"),
-        plotOutput(ns("plot"), click = "plot_click"),
-        verbatimTextOutput(ns("info")))
+        column(width = 2, class = "sidebar", box(width = 12, h4(class = "accent-color", "Options"),
+            selectizeInput(ns('countries'), "Countries:", choices = countries, selected = NULL, multiple = TRUE,
+                           options = list(placeholder = 'Type a country name, e.g. Spain', maxItems = 28)),
+            selectizeInput(ns('years'), "Years:", choices = years, selected = NULL, multiple = TRUE,
+                           options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)))),
+        column(width = 10, class = "content", box(width = 12,
+            h4("CO2 emissions per country and year"),
+            plotOutput(ns("plot.tile.co2_emission")))))
 }
 
 # Server
 
 co2_emissions_server <- function(input, output, session) {
 
+    # countries
+
     observe({
-        req(values$co2_emissions)
-
-        # Enable run model
-        #shinyjs::enable("button_run_model")
+        req(values$countries_selected)
+        if (length(isolate(input$countries)) != length(values$countries_selected)) {
+            updateSelectizeInput(session, 'countries', choices = isolate(values$countries), selected = values$countries_selected, server = TRUE)
+        }
+    })
+    observe({
+        req(input$countries)
+        if (length(input$countries) != length(isolate(values$countries_selected))) {
+            values$countries_selected <<- input$countries
+        }
     })
 
-    output$co2_emissions.summary <- renderPrint({
-        req(values$co2_emissions)
-        return(summary(values$co2_emissions))
-    })
+    # years
 
-    output$co2_emissions.head <- renderTable({
-        req(values$co2_emissions)
-        return(head(values$co2_emissions))
-    })
+    observe({
+        req(values$years_selected)
+        if (length(isolate(input$years)) != length(values$years_selected)) {
+            updateSelectizeInput(session, 'years', choices = isolate(values$years), selected = values$years_selected, server = TRUE)
+        }
+     })
+    observe({
+        req(input$years)
+        if (length(input$years) != length(isolate(values$years_selected))) {
+            values$years_selected <<- input$years
+        }
+     })
 
-    output$co2_emissions.tail <- renderTable({
-        req(values$co2_emissions)
-        return(tail(values$co2_emissions))
-    })
+    # plots
 
-    output$plot <- renderPlot({
-        ##plot( InfantMortality`, Population$X__1)
-        ggplot(data = Newco2_emissions, aes(Newco2_emissions$`Pollutant emissions from transport`, y = Newco2_emissions$X__1)) + geom_histogram(stat = "identity")
-    })
+    output$plot.tile.co2_emission <- renderPlot({
+        req(values$europe_stats)
 
-    output$plot2 <- renderPlot({
-        ggplot(co2_emissions, aes(x = Pollution$`Pollutant emissions from transport`, y = Pollution$X__9)) +
-            geom_bar(fill = "#0073C2FF", stat = "identity")
-    })
-
-    output$info <- renderText({
-        paste0("x=", input$plot_click$x, "\ny=", input$plot_click$y)
+        years <- as.numeric(isolate(values$years_selected))
+        print(years)
+        print(unique(values$europe_stats()$year))
+        ggplot(data = values$europe_stats(), aes(x = country.name, y = year)) +
+            geom_tile(aes(fill = co2.emission.pc)) +
+            geom_text(aes(label = round(co2.emission.pc, digits = 2)), colour = "lightgray") +
+            labs(x = "Country", y = "CO2 Emission") +
+            scale_x_discrete(expand = c(0, 0)) +
+            scale_y_discrete(expand = c(0, 0), limits = years, drop = TRUE)
     })
 }

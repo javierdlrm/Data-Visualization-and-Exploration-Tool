@@ -2,11 +2,11 @@
 ##########       Data preprocessing      ##########
 ###################################################
 
-co2 <- read.csv(file = "CO2 emissions per capita (melted).csv")
-ggplot(co2, aes(x = co2$Year, y = co2$Value, group = co2$Country.Name, label = co2$Country.Name)) +
-    geom_line(aes(colour = co2$Country.Name)) +
-    geom_point(aes(colour = co2$Country.Name)) +
-    geom_dl(aes(label = co2$Country.Name, colour = co2$Country.Name), method = list(dl.trans(x = x + .2), "last.points"))
+#co2 <- read.csv(file = "CO2 emissions per capita (melted).csv")
+#ggplot(co2, aes(x = co2$Year, y = co2$Value, group = co2$Country.Name, label = co2$Country.Name)) +
+    #geom_line(aes(colour = co2$Country.Name)) +
+    #geom_point(aes(colour = co2$Country.Name)) +
+    #geom_dl(aes(label = co2$Country.Name, colour = co2$Country.Name), method = list(dl.trans(x = x + .2), "last.points"))
 
 #co2 <- read.csv(file = "CO2 emissions per capita.csv")
 #co2 <- melt(co2, id.vars = c("Country.Name", "Country.Code", "Indicator.Name", "Indicator.Code"))

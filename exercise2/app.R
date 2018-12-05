@@ -18,6 +18,13 @@ library(tidyr)
 library(leaflet)
 library(reshape2)
 library(directlabels)
+library(streamgraph)
+library(lazyeval)
+library(GGally)
+library(ellipse)
+library(RColorBrewer)
+library(treemap)
+library(plotly)
 
 ###################################################
 ##########           Sources       ################
@@ -33,14 +40,15 @@ source("helpers.R")
 
 ui <- fluidPage(
     shinyjs::useShinyjs(debug = TRUE),
-    theme = shinytheme("cosmo"),
+    theme = shinytheme("flatly"),
     fluidRow(class = "main",
         div(class = "content-wrapper",
             header("Header"),
             content("Content")
         )
     ),
-    tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"))
+    tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
+    tags$script(src = "script.js")
 )
 
 ###################################################
@@ -53,11 +61,10 @@ server <- function(input, output, session) {
     values$globalSession <- session
 
     # Call modules
-    #callModule(population_server, "Population")
-    callModule(pollution_server, "Pollution")
-    #callModule(infant_mortality_server, "InfantMortality")
-    #callModule(europe_stat_server, "EuropeStat")
-    #callModule(exploration_server, "Exploration")
+    callModule(infant_mortality_server, "InfantMortality")
+    callModule(co2_emissions_server, "CO2Emission")
+    callModule(gdp_server, "GDP")
+    callModule(population_server, "Population")
 }
 
 shinyApp(ui, server)
