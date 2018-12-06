@@ -34,9 +34,6 @@ fit <- kmeans(Europe_df, 5)
 library(cluster)
 clusplot(Europe_df, fit$cluster, color = TRUE, shade = TRUE, labels = 2, lines = 0)
 
-
-
-
 #Agregating all the plots in one shiny app
 EuropeStatistics <- read.csv("Europe Statistics.csv")
 library(reshape2)

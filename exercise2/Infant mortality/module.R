@@ -92,9 +92,12 @@ infant_mortality_server <- function(input, output, session) {
         my_colors <- brewer.pal(5, "Spectral")
         my_colors = colorRampPalette(my_colors)(100)
 
-        treemap(values$europe_stats(),
+        aux_europe_stats <- values$europe_stats()
+        aux_europe_stats$population_norm <- aux_europe_stats$population/100
+
+        treemap(aux_europe_stats,
                 index = c("co2.emission.level", "country.name"),
-                vSize = "area",
+                vSize = "population_norm",
                 vColor = input$infant_variable_type,
                 type = "value",
                 title = "Infant mortality",
