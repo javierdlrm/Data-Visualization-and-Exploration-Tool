@@ -1,19 +1,19 @@
 ###################################################
-##########        Europe stat Module       ########
+#########       Clustering Module          ########
 ###################################################
 
-gdp_path <- "GDP/"
+clustering_path <- "Clustering/"
 
 # Data preprocessing
 
-source(str_c(gdp_path, "data-preprocessing.R"), local = TRUE)
+source(str_c(clustering_path, "data-preprocessing.R"), local = TRUE)
 
 # UI
 
-gdp_ui <- function(id) {
+clustering_ui <- function(id) {
     ns <- NS(id)
     tabPanel(
-        title = "GDP",
+        title = "Clustering",
         column(width = 2, class = "sidebar", box(width = 12, h4(class = "accent-color", "Options"),
             h5("General"),
             HTML("<label>Countries: </label>"),
@@ -26,18 +26,17 @@ gdp_ui <- function(id) {
             actionButton(ns("years_select_all"), class = "button-option btn btn-link", "Select all"),
             selectizeInput(ns('years'), NULL, choices = years, selected = NULL, multiple = TRUE,
                            options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)))),
-        column(width = 10, class = "content",
-            box(width = 12,
-                h4("GDP per capita, per country and year"),
-                box(width = 7, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>X-axis:</b> &emsp; Year &emsp;&emsp;&emsp; <b>Y-axis:</b> &emsp; GDP (per capita) &emsp;&emsp;&emsp; <b>Color:</b> &emsp; Country"))),
-                streamgraphOutput(ns("plot_stream_gdp")),
-                h4("GDP % for Healthcare, per country and year"),
-                plotOutput(ns("plot.dot.gdp_healthcare")))))
+        column(width = 10, class = "content", box(width = 12,
+            h4("Principal component analysis"),
+            plotOutput(ns("plot.kmeans")),
+            box(width = 4, plotOutput(ns("plot.fviz.pca_var"))),
+            box(width = 4, plotOutput(ns("plot.fviz.eig"))),
+            box(width = 4, plotOutput(ns("plot.goodman.kruskal"))))))
 }
 
 # Server
 
-gdp_server <- function(input, output, session) {
+clustering_server <- function(input, output, session) {
 
     # countries
 
@@ -89,33 +88,31 @@ gdp_server <- function(input, output, session) {
 
     # plots
 
-    # streamgraph
-
-    output$plot_stream_gdp <- renderStreamgraph({
-        req(values$europe_stats)
-        req(values$years_selected)
-
-        data <- values$europe_stats()[values$europe_stats()$year %in% values$years_selected,]
-      
-        streamgraph(data, key = "country.name", value = "gdp.pc", date = "year", interpolate = "cardinal") %>%
-            sg_axis_x(tick_units = values$years_selected, tick_format = "%Y") %>%
-            sg_fill_brewer("Spectral") %>%
-            sg_legend(show = TRUE, label = "Country: ")
+    output$plot.fviz.pca_var <- renderPlot({
+        req(values$europe_stats_pca)
+        
+        data_pca <- prcomp(values$europe_stats_pca(), scale. = T)
+        return(fviz_pca_var(data_pca))
     })
 
-    # dot chart
+    output$plot.fviz.eig <- renderPlot({
+        req(values$europe_stats_pca)
 
-    output$plot.dot.gdp_healthcare <- renderPlot({
-        req(values$europe_stats)
-        req(values$years_selected)
+        data_pca <- prcomp(values$europe_stats_pca(), scale. = T)
+        return(fviz_eig(data_pca, addlabels = TRUE, ylim = c(0, 50)))
+    })
 
-        data <- values$europe_stats()[values$europe_stats()$year %in% values$years_selected,]
+    output$plot.goodman.kruskal <- renderPlot({
+        req(values$europe_stats_pca)
 
-        ggplot(data = data, aes(x = country.name, y = year, color = gdp.pc)) +
-            geom_point(aes(size = health.gdp)) +
-            labs(x = "Country", y = "Year") +
-            scale_color_continuous(name = "GDP (per capita)") +
-            scale_size_continuous(name = "% GDP for Healthcare", range = c(1,8))
+        gkdata <- GKtauDataframe(values$europe_stats_pca())
+        return(plot(gkdata, corrColors = "blue"))
+    })
 
+    output$plot.kmeans <- renderPlot({
+        req(values$europe_stats_pca)
+        
+        fit <- kmeans(values$europe_stats_pca(), 5)
+        return(clusplot(values$europe_stats_pca(), fit$cluster, color = TRUE, shade = TRUE, labels = 2, lines = 0))
     })
 }

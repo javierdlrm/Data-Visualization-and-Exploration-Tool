@@ -71,3 +71,30 @@ ui <- fluidPage(
   )
 )
 shinyApp(ui, server)
+
+
+data <- europe_stats
+data$country.name <- NULL
+data$country.code <- NULL
+data$area <- NULL
+data$size <- NULL
+data$co2.emission.level <- NULL
+data$year <- NULL
+
+data_pca <- prcomp(data, scale. = T)
+pca <- data_pca$rotation[, 1:3]
+
+fviz_pca_var(data_pca)
+fviz_eig(data_pca, addlabels = TRUE, ylim = c(0, 50))
+
+
+
+library(GoodmanKruskal)
+attr <- c("co2.emission", "infant.mort", "infant.deaths", "gdp.pc", "health.gdp", "population", "life.exp")
+data <- subset(europe_stats, select = attr)
+gkdata <- GKtauDataframe(data)
+plot(gkdata, corrColors = "blue")
+fit <- kmeans(data, 5)
+library(cluster)
+clusplot(data, fit$cluster, color = TRUE, shade = TRUE, labels = 2, lines = 0)
+

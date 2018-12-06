@@ -2,7 +2,7 @@ library(corrplot)
 library(FactoMineR)
 library(factoextra)
 
-EuropeStatistics <- read.csv(file = "Europe Statistics.csv", header = TRUE, sep = ",")
+EuropeStatistics <- read.csv(file = "Europe statistics.csv", header = TRUE, sep = ",")
 Europe_df <- EuropeStatistics
 Europe_df$Country.Code <- NULL
 Europe_df$Country.Name <- NULL

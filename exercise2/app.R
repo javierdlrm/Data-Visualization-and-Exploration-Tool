@@ -15,7 +15,6 @@ library(ggplot2)
 library(maps)
 library(mapproj)
 library(tidyr)
-library(leaflet)
 library(reshape2)
 library(directlabels)
 library(streamgraph)
@@ -26,6 +25,11 @@ library(RColorBrewer)
 library(treemap)
 library(plotly)
 library(hrbrthemes)
+library(GoodmanKruskal)
+library(cluster)
+library(corrplot)
+library(FactoMineR)
+library(factoextra)
 
 ###################################################
 ##########           Sources       ################
@@ -65,7 +69,7 @@ server <- function(input, output, session) {
     callModule(infant_mortality_server, "InfantMortality")
     callModule(co2_emissions_server, "CO2Emission")
     callModule(gdp_server, "GDP")
-    callModule(population_server, "Population")
+    callModule(clustering_server, "Clustering")
 }
 
 shinyApp(ui, server)
