@@ -15,11 +15,21 @@ infant_mortality_ui <- function(id) {
     tabPanel(
         title = "Infant mortality",
         column(width = 2, class = "sidebar", box(width = 12, h4(class = "accent-color", "Options"),
-            selectizeInput(ns('countries'), "Countries:", choices = countries, selected = NULL, multiple = TRUE,
+            h5("General"),
+            HTML("<label>Countries: </label>"),
+            actionButton(ns("countries_reset"), class = "button-option btn btn-link", "Reset"),
+            actionButton(ns("countries_select_all"), class = "button-option btn btn-link", "Select all"),
+            selectizeInput(ns('countries'), NULL, choices = countries, selected = NULL, multiple = TRUE,
                            options = list(placeholder = 'Type a country name, e.g. Spain', maxItems = 28)),
-            selectizeInput(ns('years'), "Years:", choices = years, selected = NULL, multiple = TRUE,
+            selectizeInput(ns('infant_variable_type'), "Infant mortality variable:", choices = c("Infant mortality rate" = "infant.mort", "Infant deaths" = "infant.deaths")),
+            h5("Stack bar"),
+            HTML("<label>Years: </label>"),
+            actionButton(ns("years_reset"), class = "button-option btn btn-link", "Reset"),
+            actionButton(ns("years_select_all"), class = "button-option btn btn-link", "Select all"),
+            selectizeInput(ns('years'), NULL, choices = years, selected = NULL, multiple = TRUE,
                            options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)),
-            selectizeInput(ns('infant_variable_type'), "Infant mortality variable:", choices = c("Infant mortality rate" = "infant.mort", "Infant deaths" = "infant.deaths")))),
+            h5("Treemap and parallel coords"),
+            sliderInput(ns("year"), "Year:", min = min(years), max = max(years), value = year, step = 1))),
         column(width = 10, class = "content",
             fluidRow(
                 h4("Infant mortality per country and year"),
@@ -30,7 +40,7 @@ infant_mortality_ui <- function(id) {
                 box(width = 7, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Groups:</b> &emsp; CO2 emission level &emsp;&emsp;&emsp; <b>Subgroups:</b> &emsp; Countries &emsp;&emsp;&emsp; <b>Square-size:</b> &emsp; Population"))),
                 plotOutput(ns("plot_treemap_infant_mort"))),
             fluidRow(
-                h4("Relation between GDP and infant mortality"),
+                h4("Relation between GDP, infant mortality and life expectancy"),
                 box(width = 4, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Color scale:</b> &emsp; Population"))),
                 plotlyOutput(ns("plot_parcoords_infant_mort")))))
 }
@@ -40,6 +50,16 @@ infant_mortality_ui <- function(id) {
 infant_mortality_server <- function(input, output, session) {
 
     # countries
+
+    observe({
+        req(input$countries_reset)
+        values$countries_selected <<- isolate(values$countries[1])
+    })
+
+    observe({
+        req(input$countries_select_all)
+        values$countries_selected <<- isolate(values$countries)
+    })
 
     observe({
         req(values$countries_selected)
@@ -57,6 +77,14 @@ infant_mortality_server <- function(input, output, session) {
     # years
 
     observe({
+        req(input$years_reset)
+        values$years_selected <<- isolate(values$years[1])
+    })
+    observe({
+        req(input$years_select_all)
+        values$years_selected <<- isolate(values$years)
+    })
+    observe({
         req(values$years_selected)
         if (length(isolate(input$years)) != length(values$years_selected)) {
             updateSelectizeInput(session, 'years', choices = isolate(values$years), selected = values$years_selected, server = TRUE)
@@ -68,6 +96,10 @@ infant_mortality_server <- function(input, output, session) {
             values$years_selected <<- input$years
         }
     })
+    observe({
+        req(input$year)
+        values$year <<- input$year
+    })
 
     # plots
 
@@ -75,18 +107,26 @@ infant_mortality_server <- function(input, output, session) {
 
     output$plot_stream_infant_mort <- renderStreamgraph({
         req(values$europe_stats)
+        req(values$years_selected)
         req(input$infant_variable_type)
 
-        my_colors <- colorRampPalette(brewer.pal(9, "Set1"))(length(isolate(values$countries_selected)))
+        n_countries <- length(isolate(values$countries_selected))
+        if (n_countries > 9) {
+            my_colors <- colorRampPalette(brewer.pal(9, "Set1"))(n_countries)
+        } else {
+            my_colors <- brewer.pal(9, "Set1")
+        }
+
+        data <- values$europe_stats()[values$europe_stats()$year %in% values$years_selected,]
 
         if (input$infant_variable_type == "infant.mort") {
-            graph <- streamgraph(values$europe_stats(), key = "country.name", value = "infant.mort", date = "year", interpolate = "step", offset = "zero")
+            graph <- streamgraph(data, key = "country.name", value = "infant.mort", date = "year", interpolate = "step", offset = "zero")
         } else {
-            graph <- streamgraph(values$europe_stats(), key = "country.name", value = "infant.deaths", date = "year", interpolate = "step", offset = "zero")
+            graph <- streamgraph(data, key = "country.name", value = "infant.deaths", date = "year", interpolate = "step", offset = "zero")
         }
 
         return(graph %>%
-               sg_axis_x(tick_units = isolate(values$years_selected), tick_format = "%Y") %>%
+               sg_axis_x(tick_units = values$years_selected, tick_format = "%Y") %>%
                sg_fill_manual(values = my_colors) %>%
                sg_legend(show = TRUE, label = "Country: "))
     })
@@ -95,12 +135,12 @@ infant_mortality_server <- function(input, output, session) {
 
     output$plot_treemap_infant_mort <- renderPlot({
         req(values$europe_stats)
+        req(values$year)
         req(input$infant_variable_type)
 
-        my_colors <- brewer.pal(5, "Spectral")
-        my_colors = colorRampPalette(my_colors)(100)
+        my_colors <- colorRampPalette(brewer.pal(5, "Spectral"))(length(isolate(values$countries_selected)))
 
-        aux_europe_stats <- values$europe_stats()
+        aux_europe_stats <- values$europe_stats()[values$europe_stats()$year == values$year,]
         aux_europe_stats$population_norm <- aux_europe_stats$population / 100
 
         treemap(aux_europe_stats,
@@ -108,7 +148,8 @@ infant_mortality_server <- function(input, output, session) {
                 vSize = "population_norm",
                 vColor = input$infant_variable_type,
                 type = "value",
-                title = "Infant mortality",
+                title = " ",
+                title.legend = "Infant mortality",
                 palette = my_colors,
                 position.legend = "right",
                 fontsize.title = 14)
@@ -118,20 +159,22 @@ infant_mortality_server <- function(input, output, session) {
 
     output$plot_parcoords_infant_mort <- renderPlotly({
         req(values$europe_stats)
+        req(values$year)
         req(input$infant_variable_type)
 
+        data <- values$europe_stats()[values$europe_stats()$year == values$year,]
+
         if (input$infant_variable_type == "infant.mort") {
-            infant_mort_variables <- values$europe_stats()$infant.mort
+            infant_mort_variables <- data$infant.mort
         } else {
-            infant_mort_variables <- values$europe_stats()$infant.deaths
+            infant_mort_variables <- data$infant.deaths
         }
 
-        my_colors <- brewer.pal(5, "Set3")
-        my_colors = colorRampPalette(my_colors)(420)
+        my_colors <- colorRampPalette(brewer.pal(8, "Set3"))(length(isolate(values$countries_selected)))
 
-        values$europe_stats() %>%
+        data %>%
             plot_ly(showlegend = TRUE) %>%
-            add_trace(line = list(color = values$europe_stats()$population, showscale = TRUE, reversescale = TRUE),
+            add_trace(line = list(color = data$population, showscale = TRUE, reversescale = TRUE),
                     type = 'parcoords',
                     dimensions = list(
                         list(range = c(~min(gdp.pc), ~ max(gdp.pc)),

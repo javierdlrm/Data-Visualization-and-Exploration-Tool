@@ -59,6 +59,10 @@ body {
     border-radius: 2px;
     padding: 8px 20px;
 }
+
+.sidebar h5 {
+    font-weight: bold;
+}
     
 .affix {
     position: fixed;
@@ -80,8 +84,24 @@ body {
     margin: 0;
 }
 
+.button-option, .button-option:focus {
+    padding: 4px;
+    border: none;
+}
+
+.options-subtitle {
+    margin: 0;
+    display: inline-block;
+}
+
 /* Infant mortality */
 
 #InfantMortality-plot_stream_infant_mort, #InfantMortality-plot_treemap_infant_mort, #InfantMortality-plot_parcoords_infant_mort {
+    margin-top: 85px;
+}
+
+/* GDP */
+
+#GDP-plot_stream_gdp {
     margin-top: 85px;
 }

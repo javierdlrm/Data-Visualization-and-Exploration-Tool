@@ -15,10 +15,12 @@ values$countries_selected <- countries_selected
 # Years
 
 years <- c(2000:2014)
-years_selected <- seq(2000, 2014, by = 2)
+years_selected <- years
+year <- years[1]
 
 values$years <- years
 values$years_selected <- years_selected
+values$year <- year
 
 # Europe_Stats
 
@@ -31,6 +33,5 @@ europe_stats$size <- as.factor(europe_stats$size)
 
 values$europe_stats <- reactive({
     data <- europe_stats[europe_stats$country.name %in% values$countries_selected,]
-    data <- data[data$year %in% values$years_selected,]
     return(data)
 })
