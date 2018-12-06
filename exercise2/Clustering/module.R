@@ -25,7 +25,9 @@ clustering_ui <- function(id) {
             actionButton(ns("years_reset"), class = "button-option btn btn-link", "Reset"),
             actionButton(ns("years_select_all"), class = "button-option btn btn-link", "Select all"),
             selectizeInput(ns('years'), NULL, choices = years, selected = NULL, multiple = TRUE,
-                           options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)))),
+                           options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)),
+            h5("Treemap and parallel coords"),
+            sliderInput(ns("n_clusters"), "Nº clusters:", min = 3, max = 7, value = 3, step = 1))),
         column(width = 10, class = "content", box(width = 12,
             h4("Principal component analysis"),
             plotOutput(ns("plot.kmeans")),
@@ -111,8 +113,14 @@ clustering_server <- function(input, output, session) {
 
     output$plot.kmeans <- renderPlot({
         req(values$europe_stats_pca)
-        
-        fit <- kmeans(values$europe_stats_pca(), 5)
-        return(clusplot(values$europe_stats_pca(), fit$cluster, color = TRUE, shade = TRUE, labels = 2, lines = 0))
+        req(input$n_clusters)
+
+        fit <- kmeans(values$europe_stats_pca(), input$n_clusters)
+        #plot(values$europe_stats_pca(), col = fit$cluster)
+        #points(fit$centers, col = 1:5, pch = 8)
+
+        plot(values$europe_stats_pca(), col = fit$clust, pch = 16)
+
+        #return(clusplot(values$europe_stats_pca(), fit$cluster, color = TRUE, shade = TRUE, labels = 2, lines = 0))
     })
 }

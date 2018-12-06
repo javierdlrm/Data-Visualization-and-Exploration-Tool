@@ -39,6 +39,6 @@ values$europe_stats <- reactive({
 values$europe_stats_pca <- reactive({
     req(values$europe_stats)
     data <- data[data$year %in% values$years_selected,]
-    data <- select(values$europe_stats(), c(4, 5, 7, 8, 9, 10, 11, 12))
+    data <- select(values$europe_stats(), c(4, 7, 8, 9, 10, 11, 12))
     return(data)
 })
