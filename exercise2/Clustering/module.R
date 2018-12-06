@@ -26,11 +26,13 @@ clustering_ui <- function(id) {
             actionButton(ns("years_select_all"), class = "button-option btn btn-link", "Select all"),
             selectizeInput(ns('years'), NULL, choices = years, selected = NULL, multiple = TRUE,
                            options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)),
-            h5("Treemap and parallel coords"),
+            h5("Clustering"),
+            selectizeInput(ns('plot_data_type'), "Source:", choices = c("Dataset", "PCA"), selected = "Dataset"),
             sliderInput(ns("n_clusters"), "Nº clusters:", min = 3, max = 7, value = 3, step = 1))),
         column(width = 10, class = "content", box(width = 12,
-            h4("Principal component analysis"),
+            h4("Clustering"),
             plotOutput(ns("plot.kmeans")),
+            h4("Principal component analysis"),
             box(width = 4, plotOutput(ns("plot.fviz.pca_var"))),
             box(width = 4, plotOutput(ns("plot.fviz.eig"))),
             box(width = 4, plotOutput(ns("plot.goodman.kruskal"))))))
@@ -114,13 +116,20 @@ clustering_server <- function(input, output, session) {
     output$plot.kmeans <- renderPlot({
         req(values$europe_stats_pca)
         req(input$n_clusters)
+        req(input$plot_data_type)
 
-        fit <- kmeans(values$europe_stats_pca(), input$n_clusters)
-        #plot(values$europe_stats_pca(), col = fit$cluster)
-        #points(fit$centers, col = 1:5, pch = 8)
+        palette(alpha(brewer.pal(9, 'Set1'), 0.5))
 
-        plot(values$europe_stats_pca(), col = fit$clust, pch = 16)
-
-        #return(clusplot(values$europe_stats_pca(), fit$cluster, color = TRUE, shade = TRUE, labels = 2, lines = 0))
+        if (input$plot_data_type == "Dataset") {
+            k <- kmeans(values$europe_stats_pca(), input$n_clusters, nstart = 25, iter.max = 1000)
+            plot(values$europe_stats_pca(), col = k$clust, pch = 9)
+            #clusplot(values$europe_stats_pca(), k$cluster, color = TRUE, shade = TRUE, lines = 0)
+        } else {
+            data_pca <- prcomp(values$europe_stats_pca(), scale. = T)
+            comp <- data.frame(data_pca$x[, 1:3])
+            k <- kmeans(comp, input$n_clusters, nstart = 25, iter.max = 1000)
+            plot(comp, col = k$clust, pch = 9)
+            #clusplot(comp, k$cluster, color = TRUE, shade = TRUE, lines = 0)
+        }
     })
 }
