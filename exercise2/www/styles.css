@@ -59,7 +59,7 @@ body {
     border-radius: 2px;
     padding: 8px 20px;
 }
-
+    
 .affix {
     position: fixed;
     width: 15.5%;
@@ -68,4 +68,20 @@ body {
 
 .accent-color {
     color: #18bc9c;
+}
+
+.vertical-text {
+    transform: rotate(-90deg);
+    transform-origin: left top 15px;
+    float: left;
+}
+
+.box-note, .box-note p {
+    margin: 0;
+}
+
+/* Infant mortality */
+
+#InfantMortality-plot_stream_infant_mort, #InfantMortality-plot_treemap_infant_mort, #InfantMortality-plot_parcoords_infant_mort {
+    margin-top: 85px;
 }

@@ -20,14 +20,19 @@ infant_mortality_ui <- function(id) {
             selectizeInput(ns('years'), "Years:", choices = years, selected = NULL, multiple = TRUE,
                            options = list(placeholder = 'Type a year, e.g. 2001', maxItems = 15)),
             selectizeInput(ns('infant_variable_type'), "Infant mortality variable:", choices = c("Infant mortality rate" = "infant.mort", "Infant deaths" = "infant.deaths")))),
-        column(width = 10, class = "content", box(width = 12,
-            h4("Infant mortality per country and year"),
-            streamgraphOutput(ns("plot_stream_infant_mort")),
-            h4("Infant mortality per CO2 emission level and country"),
-            plotOutput(ns("plot.treemap.infant_mort")),
-            h4("Relation between GDP and infant mortality"),
-            h5(class = "accent-color", "NOTE: Color scale = population of the country"),
-            plotlyOutput(ns("plot.parcoords.infant_mort")))))
+        column(width = 10, class = "content",
+            fluidRow(
+                h4("Infant mortality per country and year"),
+                box(width = 4, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>X-axis:</b> &emsp; Year &emsp;&emsp;&emsp; <b>Y-axis:</b> &emsp; Infant mortality"))),
+                streamgraphOutput(ns("plot_stream_infant_mort"))),
+            fluidRow(
+                h4("Infant mortality per CO2 emission level and country"),
+                box(width = 7, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Groups:</b> &emsp; CO2 emission level &emsp;&emsp;&emsp; <b>Subgroups:</b> &emsp; Countries &emsp;&emsp;&emsp; <b>Square-size:</b> &emsp; Population"))),
+                plotOutput(ns("plot_treemap_infant_mort"))),
+            fluidRow(
+                h4("Relation between GDP and infant mortality"),
+                box(width = 4, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Color scale:</b> &emsp; Population"))),
+                plotlyOutput(ns("plot_parcoords_infant_mort")))))
 }
 
 # Server
@@ -67,25 +72,28 @@ infant_mortality_server <- function(input, output, session) {
     # plots
 
     # streamgraph
+
     output$plot_stream_infant_mort <- renderStreamgraph({
         req(values$europe_stats)
         req(input$infant_variable_type)
-        
+
+        my_colors <- colorRampPalette(brewer.pal(9, "Set1"))(length(isolate(values$countries_selected)))
+
         if (input$infant_variable_type == "infant.mort") {
-            return(streamgraph(values$europe_stats(), key = "country.name", value = "infant.mort", date = "year", interpolate = "step", offset = "zero") %>%
-                sg_axis_x(tick_units = isolate(values$years_selected), tick_format = "%Y") %>%
-                sg_fill_brewer("Spectral") %>%
-                sg_legend(show = TRUE, label = "Country names: "))
+            graph <- streamgraph(values$europe_stats(), key = "country.name", value = "infant.mort", date = "year", interpolate = "step", offset = "zero")
         } else {
-            return(streamgraph(values$europe_stats(), key = "country.name", value = "infant.deaths", date = "year", interpolate = "step", offset = "zero") %>%
-                sg_axis_x(1, "year", "%Y") %>%
-                sg_fill_brewer("Spectral") %>%
-                sg_legend(show = TRUE, label = "Country names: "))
+            graph <- streamgraph(values$europe_stats(), key = "country.name", value = "infant.deaths", date = "year", interpolate = "step", offset = "zero")
         }
+
+        return(graph %>%
+               sg_axis_x(tick_units = isolate(values$years_selected), tick_format = "%Y") %>%
+               sg_fill_manual(values = my_colors) %>%
+               sg_legend(show = TRUE, label = "Country: "))
     })
 
     # treemap
-    output$plot.treemap.infant_mort <- renderPlot({
+
+    output$plot_treemap_infant_mort <- renderPlot({
         req(values$europe_stats)
         req(input$infant_variable_type)
 
@@ -93,7 +101,7 @@ infant_mortality_server <- function(input, output, session) {
         my_colors = colorRampPalette(my_colors)(100)
 
         aux_europe_stats <- values$europe_stats()
-        aux_europe_stats$population_norm <- aux_europe_stats$population/100
+        aux_europe_stats$population_norm <- aux_europe_stats$population / 100
 
         treemap(aux_europe_stats,
                 index = c("co2.emission.level", "country.name"),
@@ -107,7 +115,8 @@ infant_mortality_server <- function(input, output, session) {
     })
 
     # parallel coordinates
-    output$plot.parcoords.infant_mort <- renderPlotly({
+
+    output$plot_parcoords_infant_mort <- renderPlotly({
         req(values$europe_stats)
         req(input$infant_variable_type)
 
@@ -119,15 +128,15 @@ infant_mortality_server <- function(input, output, session) {
 
         my_colors <- brewer.pal(5, "Set3")
         my_colors = colorRampPalette(my_colors)(420)
-        
+
         values$europe_stats() %>%
             plot_ly(showlegend = TRUE) %>%
             add_trace(line = list(color = values$europe_stats()$population, showscale = TRUE, reversescale = TRUE),
                     type = 'parcoords',
                     dimensions = list(
-                        list(range = c(~min(gdp.pc), ~max(gdp.pc)),
+                        list(range = c(~min(gdp.pc), ~ max(gdp.pc)),
                             label = 'GDP', values = ~gdp.pc),
-                        list(range = c(~min(life.exp), ~max(life.exp)),
+                        list(range = c(~min(life.exp), ~ max(life.exp)),
                             label = 'Life expectancy', values = ~life.exp),
                         list(range = c(min(infant_mort_variables), max(infant_mort_variables)),
                             label = 'Infant mortality', values = infant_mort_variables),

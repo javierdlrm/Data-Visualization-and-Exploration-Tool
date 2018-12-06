@@ -25,6 +25,7 @@ library(ellipse)
 library(RColorBrewer)
 library(treemap)
 library(plotly)
+library(hrbrthemes)
 
 ###################################################
 ##########           Sources       ################
