@@ -22,7 +22,7 @@ infant_mortality_ui <- function(id) {
             selectizeInput(ns('countries'), NULL, choices = countries, selected = NULL, multiple = TRUE,
                            options = list(placeholder = 'Type a country name, e.g. Spain', maxItems = 28)),
             selectizeInput(ns('infant_variable_type'), "Infant mortality variable:", choices = c("Infant mortality rate" = "infant.mort", "Infant deaths" = "infant.deaths")),
-            h5("Stack bar"),
+            h5("Stacked bar"),
             HTML("<label>Years: </label>"),
             actionButton(ns("years_reset"), class = "button-option btn btn-link", "Reset"),
             actionButton(ns("years_select_all"), class = "button-option btn btn-link", "Select all"),
