@@ -33,15 +33,15 @@ infant_mortality_ui <- function(id) {
         column(width = 10, class = "content",
             fluidRow(
                 h4("Infant mortality per country and year"),
-                box(width = 4, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>X-axis:</b> &emsp; Year &emsp;&emsp;&emsp; <b>Y-axis:</b> &emsp; Infant mortality"))),
+                box(width = 5, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>X-axis:</b> &emsp; Year &emsp;&emsp;&emsp; <b>Y-axis:</b> &emsp; Infant mortality &emsp;&emsp;&emsp; <b>Color:</b> &emsp; Country"))),
                 streamgraphOutput(ns("plot_stream_infant_mort"))),
             fluidRow(
                 h4("Infant mortality per CO2 emission level and country"),
-                box(width = 7, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Groups:</b> &emsp; CO2 emission level &emsp;&emsp;&emsp; <b>Subgroups:</b> &emsp; Countries &emsp;&emsp;&emsp; <b>Square-size:</b> &emsp; Population"))),
+                box(width = 8, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Groups:</b> &emsp; CO2 emission level &emsp;&emsp;&emsp; <b>Subgroups:</b> &emsp; Countries &emsp;&emsp;&emsp; <b>Square-size:</b> &emsp; Population &emsp;&emsp;&emsp; <b>Color:</b> &emsp; Infant mortality"))),
                 plotOutput(ns("plot_treemap_infant_mort"))),
             fluidRow(
                 h4("Relation between GDP, infant mortality and life expectancy"),
-                box(width = 4, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Color scale:</b> &emsp; Population"))),
+                box(width = 3, class = "well box-note", span(HTML("NOTE:&emsp;&emsp;"), class = "accent-color"), span(HTML("<b>Color scale:</b> &emsp; Population"))),
                 plotlyOutput(ns("plot_parcoords_infant_mort")))))
 }
 

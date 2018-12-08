@@ -69,6 +69,7 @@ server <- function(input, output, session) {
     callModule(infant_mortality_server, "InfantMortality")
     callModule(co2_emissions_server, "CO2Emission")
     callModule(gdp_server, "GDP")
+    callModule(population_server, "Population")
     callModule(clustering_server, "Clustering")
 }
 
