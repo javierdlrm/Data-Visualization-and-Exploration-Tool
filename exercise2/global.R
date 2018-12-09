@@ -24,7 +24,7 @@ values$year <- year
 
 # Europe_Stats
 
-europe_stats <- read.csv(file = "Europe statistics.csv")
+europe_stats <- read.csv(file = "Data/Europe statistics.csv")
 colnames(europe_stats) <- c("country.name", "country.code", "year", "co2.emission", "co2.emission.pc", "co2.emission.level", "gdp.pc", "health.gdp", "life.exp", "infant.mort", "infant.deaths", "population", "area", "size")
 europe_stats$country.name <- as.factor(europe_stats$country.name)
 europe_stats$country.code <- as.factor(europe_stats$country.code)

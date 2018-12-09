@@ -32,7 +32,7 @@ clustering_ui <- function(id) {
         column(width = 10, class = "content", box(width = 12,
             h4("Clustering"),
             plotOutput(ns("plot.kmeans")),
-            h4("Principal component analysis"),
+            h4("Principal component analysis & Goodman Kruskal"),
             box(width = 4, plotOutput(ns("plot.fviz.pca_var"))),
             box(width = 4, plotOutput(ns("plot.fviz.eig"))),
             box(width = 4, plotOutput(ns("plot.goodman.kruskal"))))))
