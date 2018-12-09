@@ -1,14 +1,9 @@
 REPORT
 
-- Problems found during the exercise:
-We only found a problem performing the task 7, while defining server function in case of reactive expressions. However, the explanation in tutorials is very simple and clear.
-We were able to fix our problem.
-
-- Personal comments and reviews:
-We are able to explore the full application development path from problem presentation and conceptual design, through coding UI.R and server.R
-The various building blocks available for constructing a UI are listed. We are able to use various widgets such as radio buttons, check boxes and sliders, to build the app.
-If you are a data scientist without web development skils, and you have already been using R for data analyses, Shiny Server is a fantastic new package that will enable you
-to quickly put together great looking web dashboards.
+- Important notes:
+In order to run the app it is neccesary to install the required libraries. One of the libraries required a special installation process (http://hrbrmstr.github.io/streamgraph/):
+Install devtools and load it by using: librar(devtools)
+Install the required package by using: devtools::install_github("hrbrmstr/streamgraph")
 
 - Estimate time required to complete the exercise:
-It took us approximately one week to complete the assignment.
+It took us approximately three weeks to complete the assignment.
