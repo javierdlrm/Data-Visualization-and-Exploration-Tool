@@ -2,10 +2,10 @@
 ##########           Libraries     ################
 ###################################################
 
-
 # IMPORTANT NOTE: 
 # It is required the use of the devtools library to install the hrbrmstr/streamgraph github package in order to plot the stream graphs.
-
+# Url: http://hrbrmstr.github.io/streamgraph/
+# Command: devtools::install_github("hrbrmstr/streamgraph")
 
 library(shiny)
 library(shinyjs)
